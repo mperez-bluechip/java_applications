@@ -22,8 +22,8 @@
 
 # eclipse IDE files and folders #
 ######################
-.metadata/
-.metadata
+/.metadata/
+/.recommenders/
 
 
 # Logs and databases #
