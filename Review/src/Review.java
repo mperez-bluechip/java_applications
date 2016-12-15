@@ -12,6 +12,22 @@ public class Review {
 		Review myReview = new Review();
 //		myReview.exampleMethod()
 //		myReview.exampleArgMethod("print this string!");
+		
+//		Arrays
+		
+		String[] breakfast = new String[3];
+		breakfast[0] = "Bacon";
+		breakfast[1] = "Eggs";
+		breakfast[2] = "Toast";
+		
+//		System.out.println(breakfast[0]);
+		
+//		Looping
+		
+		for(int i = 0; i < breakfast.length; i++){
+			System.out.println(breakfast[i]);
+		}
+		
 		}
 //   	FUNCTIONS
 		
@@ -30,8 +46,9 @@ public class Review {
 //			System.out.println(message);
 //		}
 		
-//		Arrays
 
-}
+
+}		
+
 
 
