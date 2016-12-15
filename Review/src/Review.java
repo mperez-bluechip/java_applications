@@ -15,20 +15,20 @@ public class Review {
 		
 //		Arrays
 		
-		String[] breakfast = new String[3];
-		breakfast[0] = "Bacon";
-		breakfast[1] = "Eggs";
-		breakfast[2] = "Toast";
+//		String[] breakfast = new String[3];
+//		breakfast[0] = "Bacon";
+//		breakfast[1] = "Eggs";
+//		breakfast[2] = "Toast";
 		
 //		System.out.println(breakfast[0]);
 		
 //		Looping
 		
-		for(int i = 0; i < breakfast.length; i++){
-			System.out.println(breakfast[i]);
-		}
-		
-		}
+//		for(int i = 0; i < breakfast.length; i++){
+//			System.out.println(breakfast[i]);
+//		}
+//		
+//		}
 //   	FUNCTIONS
 		
 //      Non-static
@@ -46,8 +46,47 @@ public class Review {
 //			System.out.println(message);
 //		}
 		
+//		Conditional Statements
+		
+//		one value
+		
+//		if(1 == 0){
+//			System.out.println("statement is true");
+//		}else{
+//			System.out.println("statement is false");
+//		}
+		
 
-
+		
+//		or operator
+		
+//		if(1 == 0 || 1 == 1){
+//			System.out.println("statement is true");
+//		}else{
+//			System.out.println("statement is false");
+//		}
+		
+//		and operator
+		
+//		if(1 == 0 && 1 == 1){
+//			System.out.println("statement is true");
+//		}else{
+//			System.out.println("statement is false");
+//		}
+		
+//		else if statements
+		
+		if(1 == 0 && 1 == 1){
+			System.out.println("statement is true");
+		}else if(0 == 0){
+			System.out.println("else if statement is true");
+		}else{
+			System.out.println("statement is false");
+		}
+		
+		
+	}
+		
 }		
 
 
