@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Review {
 
@@ -86,9 +87,16 @@ public class Review {
 		
 //		create instance of 'MyClass'
 		
-		MyClass mc = new MyClass();
-		System.out.println(mc.myNum);
-		mc.myMethod();
+//		MyClass mc = new MyClass();
+//		System.out.println(mc.myNum);
+//		mc.myMethod();
+		
+		System.out.println("Enter first number: ");
+		Scanner scan = new Scanner(System.in);
+		int num1 = scan.nextInt();
+		System.out.println("Enter second number: ");
+		int num2 = scan.nextInt();
+		System.out.println("Sum is " + (num1 + num2));
 	}
 		
 }		
