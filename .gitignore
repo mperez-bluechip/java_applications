@@ -20,6 +20,11 @@
 *.tar
 *.zip
 
+# eclipse IDE files #
+######################
+.metadata/
+
+
 # Logs and databases #
 ######################
 *.log
