@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Review {
 
-		public static void main(String[] args) throws IOException {
+		public static void main(String[] args) {
 // 		TODO Auto-generated method stub
 //      VARIABLES
 			
@@ -104,15 +104,31 @@ public class Review {
 //		int num2 = scan.nextInt();
 //		System.out.println("Sum is " + (num1 + num2));
 		
-//		reading text from a file
+//		reading text from a file (add: throws IOException after main if using FileReader code below)
 		
-		FileReader file = new FileReader("hello");
-		BufferedReader reader = new BufferedReader(file);
-		String data;
-		while((data = reader.readLine()) != null){
-			System.out.println(data);
+//		FileReader file = new FileReader("hello");
+//		BufferedReader reader = new BufferedReader(file);
+//		String data;
+//		while((data = reader.readLine()) != null){
+//			System.out.println(data);
+//		}
+//		reader.close();
+		
+//		handling errors in a try/catch block
+		
+		try{
+			FileReader file = new FileReader("hello");
+			BufferedReader reader = new BufferedReader(file);
+			String data;
+			while((data = reader.readLine()) != null){
+				System.out.println(data);
 		}
-		reader.close();
+			reader.close();
+		} 
+		catch(IOException error){
+			System.out.println(error);
+		}
+			
 	}
 		
 }		
