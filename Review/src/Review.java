@@ -1,8 +1,12 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Review {
 
-		public static void main(String[] args) {
+		public static void main(String[] args) throws IOException {
 // 		TODO Auto-generated method stub
 //      VARIABLES
 			
@@ -91,12 +95,24 @@ public class Review {
 //		System.out.println(mc.myNum);
 //		mc.myMethod();
 		
-		System.out.println("Enter first number: ");
-		Scanner scan = new Scanner(System.in);
-		int num1 = scan.nextInt();
-		System.out.println("Enter second number: ");
-		int num2 = scan.nextInt();
-		System.out.println("Sum is " + (num1 + num2));
+//		create user input interaction
+		
+//		System.out.println("Enter first number: ");
+//		Scanner scan = new Scanner(System.in);
+//		int num1 = scan.nextInt();
+//		System.out.println("Enter second number: ");
+//		int num2 = scan.nextInt();
+//		System.out.println("Sum is " + (num1 + num2));
+		
+//		reading text from a file
+		
+		FileReader file = new FileReader("hello");
+		BufferedReader reader = new BufferedReader(file);
+		String data;
+		while((data = reader.readLine()) != null){
+			System.out.println(data);
+		}
+		reader.close();
 	}
 		
 }		
