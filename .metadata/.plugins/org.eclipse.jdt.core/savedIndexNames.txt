@@ -1,21 +1,8 @@
 INDEX VERSION 1.129+/Applications/MAMP/htdocs/lynda/java/java_applications/.metadata/.plugins/org.eclipse.jdt.core
-1271342938.index
-692505185.index
-4107190314.index
-3351034188.index
-2214973242.index
-4274028564.index
-3447711133.index
-1570747694.index
+2012287268.index
+684546428.index
 2714597635.index
-3827432217.index
 1807004504.index
-2873823296.index
-3192905117.index
-1807349093.index
-3525795770.index
-1633376176.index
-250251547.index
-3099949926.index
-279910232.index
+2808092456.index
+1648663594.index
 3534364686.index
