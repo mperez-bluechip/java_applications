@@ -47,3 +47,7 @@ Thumbs.db
 # folders #
 ######################
 Ex_Files_UaR_JavaApps/
+/Databases/nbproject/private/
+/Databases/build/
+/Databases/Databases-war/nbproject/private/
+/Databases/Databases-ejb/nbproject/private/
