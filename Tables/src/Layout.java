@@ -1,9 +1,13 @@
 import java.awt.EventQueue;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.border.BevelBorder;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.JScrollPane;
 
 public class Layout {
 
@@ -27,20 +31,37 @@ public class Layout {
 	}
 	
 	class TableData extends AbstractTableModel {
-		String[][] allData = new String[3][3];
+		int[][] allData;
 		
-		public TableData(){
-			allData[0][0] = "1";
-			allData[0][1] = "2";
-			allData[0][2] = "3";
-			allData[1][0] = "4";
-			allData[1][1] = "5";
-			allData[1][2] = "6";
-			allData[2][0] = "7";
-			allData[2][1] = "8";
-			allData[2][2] = "9";
+		public TableData() {
+			try {
+				loadFile();
+			}
+			catch (IOException e) {
+				System.out.println(e);
+			}
 		}
 		
+		void loadFile() throws IOException {
+			FileReader file = new FileReader("data.txt");
+			BufferedReader reader = new BufferedReader(file);
+			
+			String line;
+			int r = 0;
+			while ((line = reader.readLine()) != null) {
+				String[] aLine = line.split("\\s+");
+				if (allData == null){
+					allData = new int[aLine.length][aLine.length];
+				}
+				for(int c = 0; c < aLine.length; c++){
+					int iData = Integer.parseInt(aLine[c]);
+					allData[r][c] = iData;
+				}
+				r++;
+			}
+			reader.close();
+		}
+
 		@Override
 		public int getRowCount() {
 			// TODO Auto-generated method stub
@@ -77,13 +98,16 @@ public class Layout {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(24, 17, 394, 65);
+		frame.getContentPane().add(scrollPane);
+		
 		table = new JTable();
+		scrollPane.setViewportView(table);
 		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		table.setBounds(6, 6, 438, 266);
-		frame.getContentPane().add(table);
+		
 		
 		TableData data = new TableData();
 		table.setModel(data);
-		
 	}
 }
