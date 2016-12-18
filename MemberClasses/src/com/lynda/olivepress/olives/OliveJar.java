@@ -21,5 +21,40 @@ public class OliveJar {
 			olives.add(new Olive(oliveName, color));
 		}
 	}
+	
+	public void addOlive(String oliveName, long color){
+		olives.add(new Olive(oliveName, color));
+	}
+	
+	public void reportOlives(){
+		for(Olive o: olives){
+			System.out.println("It's a " + o.oliveName + " olive!");
+		}
+	}
+	
+	class Olive {
+		
+		public static final long BLACK = 0x000000;
+		
+		public String oliveName;
+		public long color = BLACK;
+		
+		public Olive() {
+		}
+
+		public Olive(String oliveName) {
+			this.oliveName = oliveName;
+		}
+		
+		public Olive(String oliveName, long color) {
+			this(oliveName);
+			this.color = color;
+		}
+		
+		public String toString() {
+			return "name: " + this.oliveName + ": " + "color: " +  this.color;
+		}
+
+	}
 
 }
