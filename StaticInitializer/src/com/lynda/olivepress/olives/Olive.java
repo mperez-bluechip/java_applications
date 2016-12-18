@@ -2,8 +2,10 @@ package com.lynda.olivepress.olives;
 
 public class Olive {
 	
+	public static final long BLACK = 0x000000;
+	
 	public String oliveName;
-	public long color = 0x000000;
+	public long color = BLACK;
 	
 	public Olive() {
 	}
