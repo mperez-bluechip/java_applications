@@ -27,13 +27,21 @@ public class OliveJar {
 	}
 	
 	public void reportOlives() {
-		class JarLid {
+//		class JarLid {
+//			public void open() {
+//				System.out.println("Twist, twist, twist...");
+//				System.out.println("Pop!");
+//			}
+//		}
+//		new JarLid().open();
+		
+		new Object(){
 			public void open() {
 				System.out.println("Twist, twist, twist...");
 				System.out.println("Pop!");
 			}
-		}
-		new JarLid().open();		
+		}.open();
+		
 		for (Olive o : olives) {
 			System.out.println("It's a " + o.oliveName + " olive!!");
 		}
