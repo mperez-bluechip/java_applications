@@ -3,17 +3,17 @@ package com.lynda.olivepress.olives;
 public class Olive {
 	public static final long BLACK = 0x000000;
 	
-	public String oliveName;
+	public OliveName oliveName;
 	public long color = BLACK;
 	
 	public Olive() {
 	}
 
-	public Olive(String oliveName) {
+	public Olive(OliveName oliveName) {
 		this.oliveName = oliveName;
 	}
 	
-	public Olive(String oliveName, long color) {
+	public Olive(OliveName oliveName, long color) {
 		this(oliveName);
 		this.color = color;
 	}
