@@ -3,7 +3,7 @@ package com.lynda.javatraining;
 import com.lynda.javatraining.olives.Ligurio;
 
 public class Main {
-
+ 
 	public static void main(String[] args) {
 
 		Object o = new Ligurio();
