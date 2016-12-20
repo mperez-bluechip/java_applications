@@ -16,10 +16,11 @@ public class UseHashSet {
 		Olive pic = new Picholine();
 		
 		HashSet<Olive> set = new HashSet<>();
+		set.add(pic);
 		set.add(lig);
 		set.add(kal);
-		set.add(pic);
 		System.out.println("There are " + set.size() + " olives in the set.");
+		System.out.println(set);
 		
 	}
 
