@@ -3,8 +3,12 @@ package com.lynda.javatraining.calc;
 public class Calculator2 {
 
 	public static void main(String[] args) {
+		
+		
 		String s1 = InputHelper.getInput("Enter a numeric value: ");
+		assert checkInput(s1);
 		String s2 = InputHelper.getInput("Enter a numeric value: ");
+		assert checkInput(s2);
 		String op = InputHelper.getInput("Enter + or - or * or / ");
 		
 		double result = 0;
@@ -30,5 +34,14 @@ public class Calculator2 {
 		
 		System.out.println("The answer is " + result);
 	}
+	
+		private static boolean checkInput(String s){
+			try {
+				Integer.parseInt(s);
+				return true;
+			} catch (Exception e) {
+				return false;
+			}
+		}
 	
 }
