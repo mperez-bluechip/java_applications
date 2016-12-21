@@ -22,6 +22,10 @@ public class Main {
 		
 		display(list);
 		
+//		Olive o1 = list.peek();
+		Olive o1 = list.poll();
+		System.out.println(o1.oliveName.toString());
+		display(list);
 	}
 	
 	static private void display(Collection<Olive> col) {
