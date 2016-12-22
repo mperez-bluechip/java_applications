@@ -1,6 +1,9 @@
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Main {
 
@@ -8,6 +11,12 @@ public class Main {
 		
 		Path source = Paths.get("files/loremipsum.txt");
 		System.out.println(source.getFileName());
+		
+		Path target = Paths.get("files/newFile.txt");
+		Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+		
+		
 	}
-
+	
 }
+
