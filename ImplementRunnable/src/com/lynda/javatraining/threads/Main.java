@@ -9,6 +9,9 @@ public class Main {
 		MyThread thread = new MyThread();
 		thread.start();
 		
+		MyRunnable runnable = new MyRunnable();
+		new Thread(runnable).start();
+		
 		try {
 			for (int i = 0; i < iterations; i++) {
 				System.out.println("from main process");

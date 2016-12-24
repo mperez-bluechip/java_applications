@@ -8,7 +8,7 @@ public class MyThread extends Thread {
 		
 		try {
 			for (int i = 0; i < iterations; i++) {
-				System.out.println("From secondary thread");
+				System.out.println("from secondary thread");
 				sleep(2000);
 			}
 		} catch (InterruptedException e) {
