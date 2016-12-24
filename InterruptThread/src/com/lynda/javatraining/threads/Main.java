@@ -6,6 +6,15 @@ public class Main {
 
 		MyThread t = new MyThread();
 		t.start();
+		
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		t.interrupt();
+		System.out.println("Called interrupt()");
 
 	}
 

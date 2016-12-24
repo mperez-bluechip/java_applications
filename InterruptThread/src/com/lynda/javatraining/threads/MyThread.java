@@ -12,7 +12,7 @@ public class MyThread extends Thread {
 				sleep(1000);
 			}
 		} catch (InterruptedException e) {
-			System.err.println(e);
+			System.err.println("Thread interrupted");
 		}
 	}
 	
