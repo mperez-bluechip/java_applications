@@ -9,8 +9,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try (
-				FileInputStream in = new FileInputStream("textfile.txt");
-				FileOutputStream out = new FileOutputStream("new.txt");
+				FileInputStream in = new FileInputStream("flower.jpg");
+				FileOutputStream out = new FileOutputStream("newflower.jpg");
 			)
 		
 		{
