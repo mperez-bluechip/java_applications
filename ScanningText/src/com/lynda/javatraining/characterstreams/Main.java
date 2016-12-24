@@ -1,30 +1,24 @@
 package com.lynda.javatraining.characterstreams;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		try (
-				BufferedReader in = new BufferedReader(new FileReader("textfile.txt"));
-				BufferedWriter out = new BufferedWriter(new FileWriter("newfile.txt"));
-				) {
-			int c;
-			while ((c = in.read()) != -1) {
-				out.write(c);
+				Scanner s = new Scanner( new BufferedReader(new FileReader("tokenizedtext.txt")));
+			) {  
+			s.useDelimiter(",");
+			while (s.hasNext()) {
+				System.out.println(s.next());
 			}
 			System.out.println("All done!");
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
-		
+			e.printStackTrace();	
+		}
 	}
 }
