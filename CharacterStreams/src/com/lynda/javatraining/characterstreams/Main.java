@@ -1,8 +1,8 @@
 package com.lynda.javatraining.characterstreams;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
@@ -10,8 +10,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		try (
-				FileInputStream in = new FileInputStream("flower.jpg");
-				FileOutputStream out = new FileOutputStream("newflower.jpg");
+				FileReader in = new FileReader("textfile.txt");
+				FileWriter out = new FileWriter("newfile.txt");
 				) {
 			int c;
 			while ((c = in.read()) != -1) {
